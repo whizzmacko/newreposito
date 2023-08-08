@@ -30,6 +30,7 @@ import sqlite3
 
 conn=sqlite3.connect("majaribio.db")
 cursor = conn.cursor()
+cursor=conn.close()
 
 command1= """ CREATE TABLE IF NOT EXISTS stores (id INTERGER PRIMARY KEY, name TEXT)"""
 cursor.execute(command1)
